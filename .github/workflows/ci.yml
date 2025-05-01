@@ -11,16 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Клонировать репозиторий
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Установить Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      - name: Установить зависимости
+      - name: Install dependencies
+        working-directory: ./movie-app/server/
         run: npm install
 
-      - name: Протестировать Docker-сборку
+      - name: Test Docker build
         run: docker-compose -f docker-compose.yml build
