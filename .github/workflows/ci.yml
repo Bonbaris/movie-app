@@ -20,7 +20,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        working-directory: ./movie-app/server/
+        working-directory: movie-app/server/
         run: npm install
 
       - name: Test Docker build
