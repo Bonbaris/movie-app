@@ -22,10 +22,6 @@ jobs:
       - name: Install server dependencies
         run: npm install
         working-directory: ./server
-
-      - name: Install client dependencies
-        run: npm install
-        working-directory: ./client
-
+        
       - name: Test Docker build
         run: docker-compose -f docker-compose.yml build
