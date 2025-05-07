@@ -37,4 +37,5 @@ docker-compose up --build
 **The project includes two connected containers:**
   - server — Node.js backend (port 6450, internal)
   - nginx — reverse proxy (port 80, external)
+
 Nginx forwards external HTTP requests to the Node.js server.
